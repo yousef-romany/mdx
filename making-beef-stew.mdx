@@ -1,42 +1,28 @@
 ---
-date: '2021-03-28'
-thumbnail: /assets/banana-bread.webp
-title: Banana Banana Bread
-description: Banana bread is moist, delicious, and absolutely packed with banana flavor. 
-readTime: 10
+title: 'Just Testing'
+date: '2023-04-28'
+tags: ['next.js','nextjs','new']
 ---
 
-### Ingredients
+We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 
-- 1000 ml water.
+```ts
+const sum = (num1: number, num2: number): number => {
+    return num1 + num2
+}
 
-- 10 grams dried kelp.
+console.log(sum(4,8)) //12
+```
 
-- 40 grams bonito flakes.
+You can use Static Generation for many types of pages, including:
 
-<br />
+- Marketing pages
+- Blog posts
+- E-commerce product listings
+- Help and documentation
 
-### Directions
+You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
 
-- Lightly wipe the surface of the kelp with a tightly wrung cloth.
+On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
 
-- Put water and kelp in a pot.
-
-- Heat on low heat, and when small bubbles come out from the bottom of the pot (about 7 minutes), remove the kelp.
-
-- When the kelp soup stock boils, add bonito flakes and simmer on low heat for 1 minute.
-
-- Set a colander on a bowl, spread a paper towel on it, and strain the soup stock.
-
-
-You can check it out on [YouTube](https://youtu.be/6Lxdp1R40EY).
-
-<br />
-
-<h1> Preservation Method </h1>
-
-Transfer the stock to a food storage container and store in the fridge. It can be used for 2-3 days.
-
-<h1> Tips </h1>
-
-- The white powder on the surface of dried kelp is "umami", so do not remove it.
+In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
