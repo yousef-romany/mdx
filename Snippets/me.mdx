@@ -1,30 +1,31 @@
 ---
-img: 'https://raw.githubusercontent.com/yousef-romany/mdx/main11/Images/two.jpg'
-title: 'Just Testing'
+img: 'https://raw.githubusercontent.com/yousef-romany/mdx/main11/Images/one.jpg'
+title: 'DistributiveOmit'
+description: 'Custom omit type that omits a property from all members, preserving union types.'
 date: '2023-04-28'
 tags: ['next.js','nextjs','new']
 time: "1232"
 ---
 
+We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 
-**My code is**
 
 
-```
-console.log("hello world")
-```
-<div class="w-full flex justify-center items-center">
-  <Image src="https://raw.githubusercontent.com/yousef-romany/mdx/main11/Images/one.jpg" width="200px" height="auto" />
-</div>
+You can use Static Generation for many types of pages, including:
 
-```
-console.log("hello world")
-```
+- Marketing pages
+- Blog posts
+- E-commerce product listings
+- Help and documentation
 
 ```
 console.log("hello world")
 ```
 
-```
-console.log("hello world")
-```
+You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
+
+hello me yousef romany frahat
+
+On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
+
+In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
